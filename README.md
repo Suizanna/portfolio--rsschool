@@ -1,1 +1,1 @@
-# portfolio--rsschool
+# portfolio-rsschool
