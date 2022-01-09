@@ -199,7 +199,7 @@ color: #ffffff;
    display: flex;
    justify-content: center;
 }
-.wrapper:before {
+.wrapper::before {
    content:'';
    display:block;
    width: 700px;
