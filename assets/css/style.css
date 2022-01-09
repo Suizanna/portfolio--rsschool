@@ -6,10 +6,16 @@
   --timingFn: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (max-width: 768px) {
+  :root {
+    --font1: 40px;
+    --font2: 32px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
-F
 
 html {
   scroll-behavior: smooth; 
@@ -60,7 +66,9 @@ a {
   padding: 0 20px;
   outline: 1px solid red; 
 }
-
+.container {
+  width: calc(100% - 40px);
+}
 /* =================== HEADER ====================== */
 .header {
   padding-top: 20px;
@@ -79,7 +87,7 @@ a {
 
 /* logo */
 .logo {
-  background-image: url('./assets/img/logo.svg');
+  background-image: url('../img/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;  
   transition: all 300ms var(--timingFn);
@@ -186,11 +194,22 @@ color: #ffffff;
    padding-top: 100px;
    outline: 1px solid yellowgreen; 
 }
-.wrapper {
- background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+.wrapper  {
+   position: relative;
+   display: flex;
+   justify-content: center;
 }
-.section-title {
-  font-family: Merriweather;
+.wrapper:before {
+   content:'';
+   display:block;
+   width: 700px;
+   height: 2px;
+   background-color: var(--color-gold);
+   position: absolute;
+   top:39px;
+}
+.section-title  {
+   font-family: Merriweather;
   font-style: normal;
   font-weight: 700;
   font-size: var(--font2);
@@ -198,6 +217,10 @@ color: #ffffff;
   text-align: center;
   color: var(--color-gold);
   margin-bottom: 60px;
+
+   position: relative;
+   background-color:#000;
+   padding:0 20px;
 }
 /* Cart */
 .skills__items {
@@ -391,29 +414,23 @@ text-align: center;
 }
 .price-button:hover,
 .price-button:focus {
-color: #ffffff;
+color: hsl(0, 0%, 100%);
 }
-/* ================== contacts ====================== */
+/* ================== contacts ================ ====== */
 .contacts {
    padding-top: 100px; 
 }
-/* img */
-.contacts .container {
+.contacts .container{
   background: url('../img/contacts.jpg');
   background-size: auto 700px;
   background-position: center center;
 }
-.box {
-  display: flex;
-  justify-content: flex-end;
-}
-.form-contacts {  
+.form-contacts { 
   width: 450px;
   height: 445px; 
-  outline: 1px solid blue; 
  }
 .form-title {
-margin-bottom: 40px;
+  margin-bottom: 40px; 
 }
 ::placeholder {
   font-family: inherit;
