@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="assets/svg/camera.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +19,11 @@
         <div class="container">
             <div class="header__bg"></div>
             <nav class="nav">
-                <img class="logo" src="./assets/img/logo.svg" alt="Photographer Alex Rise">
+                <div class="logo">
+                    <a href="/">
+                        <img src="./assets/img/logo.svg" alt="Photographer Alex Rise"></img>
+                    </a>
+                </div>
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="#skills" class="nav-link">
@@ -45,13 +50,12 @@
                             Contacts
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            en / ru
-                        </a>
-                    </li>
                 </ul>
-
+                <div class="language-switch">
+                    <a class="language-link active" href="#">en</a>
+                    <p class="language-link">/</p>
+                    <a class="language-link" href="#">ru</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -60,14 +64,17 @@
         <section class="hero">
             <div class="container">
                 <!-- title -->
-                <h1 class="hero-title">Alexa Rise</h1>
-                <p class="hero-text">
-                    Save sincere emotions, romantic feelings and</br> happy moments of life together with
-                    professional</br>
-                    photographer Alexa Rise
-                </p>
-                <button class="hero-button" type="button">
-                    Here me</button>
+                <div class="hero-content-box">
+                    <h1 class="hero-title">Alexa Rise</h1>
+                    <p class="hero-text">
+                        Save sincere emotions, romantic feelings and
+                        happy moments of life together with
+                        professional
+                        photographer Alexa Rise
+                    </p>
+                    <button class="btn" type="button">
+                        Here me</button>
+                </div>
             </div>
         </section>
         <!-- SKILLS -->
@@ -104,32 +111,38 @@
                     <h2 class="section-title">Portfolio</h2>
                 </div>
                 <!-- radio buttons -->
-                <ul class="button-list">
-                    <li class="button-item">
-                        <button type="button" class="button-nav">Winter</button>
+                <ul class="portfolio-btn-list">
+                    <li class="portfolio-btn-item">
+                        <button class="portfolio-btn btn" type="button">Winter</button>
                     </li>
-                    <li class="button-item"><button type="button" class="button-nav">Spring</button></li>
-                    <li class="button-item"><button type="button" class="button-nav">Summer</button></li>
-                    <li class="button-item"><button type="button" class="button-nav">Autumn</button></li>
+                    <li class="portfolio-btn-item">
+                        <button class="portfolio-btn btn" type="button">Spring</button>
+                    </li>
+                    <li class="portfolio-btn-item">
+                        <button class="portfolio-btn btn" type="button">Summer</button>
+                    </li>
+                    <li class="portfolio-btn-item">
+                        <button class="portfolio-btn btn" type="button">Autumn</button>
+                    </li>
                 </ul>
                 <!-- img -->
-                <ul class="portfolio-img">
-                    <li>
+                <ul class="portfolio-items-img">
+                    <li class="portfolio-item">
                         <img src="./assets/img/portfolio-img-1.jpg" alt="boy and girl">
                     </li>
-                    <li>
+                    <li class="portfolio-item">
                         <img src="./assets/img/portfolio-img-2.jpg" alt="tree">
                     </li>
-                    <li>
+                    <li class="portfolio-item">
                         <img src="./assets/img/portfolio-img-3.jpg" alt="child">
                     </li>
-                    <li>
+                    <li class="portfolio-item">
                         <img src="./assets/img/portfolio-img-4.jpg" alt="big tree">
                     </li>
-                    <li>
+                    <li class="portfolio-item">
                         <img src="./assets/img/portfolio-img-5.jpg" alt="man and woman">
                     </li>
-                    <li>
+                    <li class="portfolio-item">
                         <img src="./assets/img/portfolio-img-6.jpg" alt="phone">
                     </li>
                 </ul>
@@ -156,33 +169,34 @@
                 <div class="price-block">
                     <article class="price-cart">
                         <h3 class="price-title">Standard</h3>
-                        <p class="cost">500 $</p>
+                        <p class="price-tag">500 $</p>
                         <span class="price-description">One location</span>
                         <span class="price-description">120 photos in color</span>
                         <span class="price-description">12 photos in retouch</span>
                         <span class="price-description">Readiness 2-3 weeks</span>
                         <span class="price-description">Make up, visage</span>
-                        <button class="price-button" type="button" data-modal-open>Order shooting</button>
+                        <button class="price-button btn" type="button" data-modal-open>Order shooting
+                        </button>
                     </article>
                     <article class="price-cart">
-                        <h3 class="price-title">Standard</h3>
-                        <p class="cost">500 $</p>
-                        <span class="price-description">One location</span>
-                        <span class="price-description">120 photos in color</span>
-                        <span class="price-description">12 photos in retouch</span>
-                        <span class="price-description">Readiness 2-3 weeks</span>
+                        <h3 class="price-title">Premium</h3>
+                        <p class="price-tag">700 $</p>
+                        <span class="price-description">One or two locations</span>
+                        <span class="price-description">200 photos in color</span>
+                        <span class="price-description">20 photos in retouch</span>
+                        <span class="price-description">Readiness 1-2 weeks</span>
                         <span class="price-description">Make up, visage</span>
-                        <button class="price-button" type="button" data-modal-open>Order shooting</button>
+                        <button class="price-button btn" type="button" data-modal-open>Order shooting</button>
                     </article>
                     <article class="price-cart">
-                        <h3 class="price-title">Standard</h3>
-                        <p class="cost">500 $</p>
-                        <span class="price-description">One location</span>
-                        <span class="price-description">120 photos in color</span>
-                        <span class="price-description">12 photos in retouch</span>
-                        <span class="price-description">Readiness 2-3 weeks</span>
-                        <span class="price-description">Make up, visage</span>
-                        <button class="price-button" type="button">Order shooting</button>
+                        <h3 class="price-title">Gold</h3>
+                        <p class="price-tag">51000 $</p>
+                        <span class="price-description">Three locations or more</span>
+                        <span class="price-description">300 photos in color</span>
+                        <span class="price-description">50 photos in retouch</span>
+                        <span class="price-description">Readiness 1 week</span>
+                        <span class="price-description">Make up, visage, hairstyle</span>
+                        <button class="price-button btn" type="button">Order shooting</button>
                     </article>
                 </div>
             </div>
@@ -196,22 +210,21 @@
                         <input class="input" type="email" name="mail" id="contact-mail" placeholder="E-mail" />
                         <input class="input" type="tel" name="phone" id="contact-phone" placeholder="Phone">
                         <textarea class="textarea" name="comment" placeholder="Message"></textarea>
-                        <button class="form-button" type="button">Send message</button>
+                        <button class="btn" type="button">Send message</button>
                     </form>
                 </div>
             </div>
         </section>
-        <!-- end container -->
     </main>
-    <footer class="footer">
+    <footer>
         <section class="footer">
             <div class="container">
                 <h3 class="footer-title">footer</h3>
                 <div class="footer-block">
                     <!-- github -->
                     <ul class="item">
-                        <p class="item">©</p>
-                        <p class="item">2022</p>
+                        <li class="item">©</li>
+                        <li class="item">2022</li>
                         <li class="">
                             <a class="footer-link" href="https://github.com" target="_blank">
                                 github
@@ -251,7 +264,7 @@
                         </li>
                         <li class="icon-list-item">
                             <a href="https://github.com">
-                                <svg class="icon" class="social-list-svg">
+                                <svg class="icon">
                                     <use xlink:href="./assets/svg/sprite.svg#pinterest"></use>
                                 </svg>
                             </a>
