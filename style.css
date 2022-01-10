@@ -427,6 +427,7 @@ a {
   font-family: inherit;
   color: var(--color-gold);
   font-size: 20px;
+  padding-left: 20px;
 }
 input {
   width: 450px;
