@@ -16,14 +16,10 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
             <div class="header__bg"></div>
+            <div class="logo"></div>
             <nav class="nav">
-                <div class="logo">
-                    <a href="/">
-                        <img src="./assets/img/logo.svg" alt="Photographer Alex Rise" />
-                    </a>
-                </div>
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="#skills" class="nav-link">
@@ -53,7 +49,7 @@
                 </ul>
                 <div class="language-switch">
                     <a class="language-link active" href="#">en</a>
-                    <p class="language-link">/</p>
+                    <p class="slash">/</p>
                     <a class="language-link" href="#">ru</a>
                 </div>
             </nav>
@@ -122,7 +118,7 @@
                         <button class="portfolio-btn btn" type="button">Summer</button>
                     </li>
                     <li class="portfolio-btn-item">
-                        <button class="portfolio-btn btn" type="button">Autumn</button>
+                        <button class="portfolio-btn btn portfolio-btn-active" type="button">Autumn</button>
                     </li>
                 </ul>
                 <!-- img -->
@@ -156,7 +152,7 @@
                 </div>
                 <div class="video-player">
                     <img src="./assets/img/video-player.jpg" alt="bride and groom">
-                    <img class="video-button" src="./assets/svg/Play_hover.svg" alt="video-button">
+                    <button class="video-btn video-btn-color"></button>
                 </div>
             </div>
         </section>
@@ -207,9 +203,9 @@
                 <div class="wrapper-contacts">
                     <form class="form-contacts">
                         <h2 class="section-title form-title">Contact me</h2>
-                        <input class="input" type="email" name="mail" id="contact-mail" placeholder="E-mail" />
-                        <input class="input" type="tel" name="phone" id="contact-phone" placeholder="Phone">
-                        <textarea class="textarea" name="comment" placeholder="Message"></textarea>
+                        <input class="form-input" type="email" name="mail" id="contact-mail" placeholder="E-mail" />
+                        <input class="form-input" type="tel" name="phone" id="contact-phone" placeholder="Phone">
+                        <textarea class="form-input" name="comment" placeholder="Message"></textarea>
                         <button class="btn" type="button">Send message</button>
                     </form>
                 </div>
@@ -222,11 +218,11 @@
                 <h3 class="footer-title">footer</h3>
                 <div class="footer-block">
                     <!-- github -->
-                    <ul class="item">
-                        <li class="item">©</li>
-                        <li class="item">2022</li>
+                    <ul class="footer-data">
+                        <li class="footer-item">©</li>
+                        <li class="footer-item">2022</li>
                         <li class="">
-                            <a class="footer-link" href="https://github.com" target="_blank">
+                            <a class="footer-item link" href="https://github.com" target="_blank">
                                 github
                             </a>
                         </li>
@@ -234,7 +230,7 @@
                     <!-- Rolling Scopes School -->
                     <ul>
                         <li>
-                            <a class="footer-link" href="https://rs.school/js-stage0/" target="_blank">
+                            <a class="footer-school link" href="https://rs.school/js-stage0/" target="_blank">
                                 Rolling Scopes School
                             </a>
                         </li>
@@ -242,28 +238,28 @@
                     <!-- icons -->
                     <ul class="icon-list">
                         <li class="icon-list-item">
-                            <a href="https://github.com">
+                            <a href="#">
                                 <svg class="icon">
                                     <use xlink:href="./assets/svg/sprite.svg#instagram"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="icon-list-item">
-                            <a href="https://github.com">
+                            <a href="#">
                                 <svg class="icon">
                                     <use xlink:href="./assets/svg/sprite.svg#facebook"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="icon-list-item">
-                            <a href="https://github.com">
+                            <a href="#">
                                 <svg class="icon">
                                     <use xlink:href="./assets/svg/sprite.svg#twitter"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="icon-list-item">
-                            <a href="https://github.com">
+                            <a href="#">
                                 <svg class="icon">
                                     <use xlink:href="./assets/svg/sprite.svg#pinterest"></use>
                                 </svg>
@@ -274,7 +270,7 @@
             </div>
         </section>
     </footer>
-    <script src="/index.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
