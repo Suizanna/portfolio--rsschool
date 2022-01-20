@@ -276,7 +276,7 @@ a {
   /* padding-top: 100px; */
   /* outline: 1px solid blue; */
 }
-/* .wrapper {
+.wrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -289,7 +289,7 @@ a {
   background-color: var(--color-gold);
   position: absolute;
   top: 39px;
-} */
+}
 
 .title {
   margin: auto;
