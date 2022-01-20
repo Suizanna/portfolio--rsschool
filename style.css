@@ -73,7 +73,7 @@ a {
 }
 
 /* common styles */
-/* .section-title {
+.section-title {
   font-family: "Merriweather", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -85,7 +85,7 @@ a {
   margin-bottom: 60px;
   position: relative;
   padding: 0 20px;
-} */
+}
 @media (max-width: 768px) {
   .section-title {
     font-size: 32px;
@@ -290,19 +290,7 @@ a {
   position: absolute;
   top: 39px;
 } */
-.section-title {
-  font-family: "Merriweather", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 80px;
-  text-align: center;
-  color: var(--color-gold);
-  background-color: #000;
-  margin-bottom: 60px;
-  position: relative;
-  padding: 0 20px;
-}
+
 .title {
   margin: auto;
   margin-top: 125px;
