@@ -62,7 +62,10 @@ ul {
 a {
   text-decoration: none;
 }
-
+html,
+body {
+  width: 100%;
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -70,7 +73,7 @@ a {
   /* outline: 1px solid red; */
 }
 .container {
-  width: calc(100% - 40px);
+  width: 100%;
 }
 @media (max-width: 768px) {
   .container {
@@ -696,5 +699,25 @@ input:-webkit-autofill:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    order: 1;
+    margin-right: 44px;
+    margin-left: 12px;
+  }
+  .menu__button {
+    display: block;
+    align-self: flex-end;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 40px;
+    font-size: 0;
+  }
+  .icon:hover {
+    fill: var(--color-gold);
   }
 }
