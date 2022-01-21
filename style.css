@@ -419,17 +419,26 @@ a {
   .portfolio-btn-list {
     width: 445px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+
     outline: 1px solid blue;
   }
   .portfolio-btn-item {
     margin-right: 0px;
   }
-  /* .portfolio-item {
+  /* img */
+  .portfolio-items-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+  }
+  .portfolio-item {
     width: 450px;
     height: 560px;
-  } */
+  }
 }
 /* ================== video ====================== */
 .video {
@@ -525,6 +534,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 44px;
   }
   .price-cart {
