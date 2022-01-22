@@ -231,6 +231,7 @@ body {
   .language-link:not(:last-child) {
     margin-right: 9px;
   }
+  /* отступ от бургера  */
   .language-link {
     margin-right: 135px;
   }
@@ -719,7 +720,7 @@ input:-webkit-autofill:active {
 }
 /* ================== burger ================== */
 @media (max-width: 768px) {
-  .burger {
+  .burger-icon {
     display: block;
     position: absolute;
     top: 20px;
@@ -730,52 +731,27 @@ input:-webkit-autofill:active {
     background: url(./assets/svg/burger_start.svg);
     cursor: pointer;
   }
-  /* burg container */
-  .burg-cont {
+  .burg-modal {
     display: block;
     position: absolute;
     transition: 1s;
-    /* top: 5vh; */
-    /* left: -55vw; */
-    /* width: 75vw; */
     top: 0px;
     left: -85vw;
     width: 620px;
     height: 1000px;
     min-height: 100vh;
     background-color: #000000;
-    /* outline: 1px solid yellow; */
+    z-index: 999;
   }
-  /* .backdrop {
-    width: 768px;
-    height: 1019px;
-    left: 0px;
-    top: 0px;
-    background: #000000;
-    opacity: 0.5;
-  } */
-  /* .backdrop {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    overflow-y: scroll;
-    opacity: 0.5;
-  } */
   .left {
     transition: 1s;
     left: 19vw;
   }
-  .burg-end {
-    /* margin-top: 2vh;
-    margin-left: 25vw; */
+  .burg-close {
     margin-top: 20px;
     margin-left: 511px;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 28px;
     background: url(./assets/svg/burger_end.svg);
     background-position: center;
     background-size: contain;
@@ -788,7 +764,7 @@ input:-webkit-autofill:active {
   .over-hid {
     overflow: hidden;
   }
-  /* =========  menu box ========== */
+  /* ========= menu nav ========== */
   .menu__burg {
     padding-top: 50px;
     padding-left: 125px;
@@ -804,4 +780,61 @@ input:-webkit-autofill:active {
     line-height: 73px;
     color: #ffffff;
   }
+
+  /* ========= overlay ========== */
+  .backdrop-active {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
+/* ========= burger-2 ========== */
+/* .burger-icon {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background: url(./assets/svg/burger_start.svg);
+    cursor: pointer;
+  }
+  .burg-modal {
+    display: block;
+    position: absolute;
+    transition: 1s;
+    left: -55vw;
+    top: 5vh;
+    width: 50vw;
+    min-height: 30vh;
+    background-color: rgb(104, 103, 103, 0.95);
+    border: 5px solid rgb(104, 103, 103);
+    box-shadow: -19px 5px 40px -5px rgba(34, 60, 80, 0.6);
+  }
+  .left {
+    transition: 1s;
+    left: 25vw;
+  }
+  .burg-close {
+    margin-top: 2vh;
+    margin-left: 40vw;
+    width: 28px;
+    height: 28px;
+    background: url(./assets/svg/burger_end.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .hide {
+    display: none;
+  }
+  .over-hid {
+    overflow: hidden;
+  } */
