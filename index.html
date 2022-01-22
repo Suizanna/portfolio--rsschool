@@ -19,15 +19,7 @@
         <div class="container header-container">
             <div class="header__bg"></div>
             <div class="logo"></div>
-            <nav class="nav header__menu">
-                    <!-- КНОПКА-МЕНЮ -->
-                    <!-- <button type="button" class="menu__button is-open" data-menu-button aria-controls="mobile-menu">
-                        <svg width="40" height="40" aria-label="переключатель мобильного меню">
-                            <use class="icon icon-cross" href="./assets/img/sprite.svg.svg#icon-cross"></use>
-                            <use class="icon icon-menu" href="./assets/img/sprite.svg.svg#icon-menu"></use>
-                        </svg>
-                    </button> -->
-                      
+            <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="#skills" class="nav-link">
@@ -61,9 +53,23 @@
                 <p class="slash">/</p>
                 <a class="language-link" href="#">ru</a>
             </div>
-        </div>
-      
+            <!-- BURGER-->
+     <!-- <div class="backdrop"></div> Куда? -->
+            <div class="burger"></div>
+            <div class="burg-cont">
+                <div class="burg-end cl"></div>
+                <nav class="menu__burg">
+                    <ul class="menu__burg__item">
+                        <li class="cl"><a class="burg-link" href="#skills">Skills</a></li>
+                        <li class="cl"><a class="burg-link" href="#portfolio">Portfolio</a></li>
+                        <li class="cl"><a class="burg-link" href="#video">Video</a></li>
+                        <li class="cl"><a class="burg-link" href="#price">Price</a></li>
+                        <li class="cl"><a class="burg-link" href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
             </div>
+    
+        </div>
     </header>
     <main>
         <!-- HERO -->
@@ -216,7 +222,7 @@
                         <input class="form-input" type="email" name="mail" id="contact-mail" placeholder="E-mail" />
                         <input class="form-input" type="tel" name="phone" id="contact-phone" placeholder="Phone">
                         <textarea class="form-input" name="comment" placeholder="Message"></textarea>
-                        <button class="btn" type="button">Send message</button>
+                        <button class="form-btn btn" type="button">Send message</button>
                     </form>
                 </div>
             </div>
