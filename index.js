@@ -59,12 +59,6 @@ console.log(
 //   iconBurg.classList.remove("hide");
 // }
 
-// const hamburger = document.querySelector(".hamburger");
-// function toggleMenu() {
-//   hamburger.classList.toggle("is-active");
-// }
-// hamburger.addEventListener("click", toggleMenu);
-
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".header__nav");
 const navLink = document.querySelectorAll(".header__nav-link");
