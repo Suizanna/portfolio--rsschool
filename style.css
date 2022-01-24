@@ -71,7 +71,6 @@ body {
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 768px;
     padding: 0 60px;
   }
 }
@@ -127,7 +126,7 @@ body {
   background: url("./assets/img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
-  width: 1440px;
+  max-width: 1440px;
   width: 100%;
   height: 910px;
   position: absolute;
@@ -217,7 +216,7 @@ body {
     background: url("./assets/img/bg-tablet.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
-    width: 768px;
+    max-width: 768px;
     width: 100%;
     height: 590px;
   }
@@ -265,7 +264,7 @@ body {
   font-weight: normal;
   font-size: 20px;
   line-height: 40px;
-  width: 470px;
+  max-width: 470px;
   margin-bottom: 25px;
 }
 /* =================== hero tablet ====================== */
@@ -285,7 +284,7 @@ body {
   }
   .hero-text {
     line-height: 24px;
-    width: 390px;
+    max-width: 390px;
     margin-bottom: 60px;
   }
 }
@@ -377,13 +376,15 @@ body {
   }
   .skills__items-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    /* width: 768px; */
+    gap: 35px 0;
+    padding-bottom: 27px;
   }
   .skill__item {
     width: 300px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 /* ================== portfolio ====================== */
@@ -393,8 +394,8 @@ body {
 /* btn */
 .portfolio-btn-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap; /**/
   padding-bottom: 60px;
 }
 .portfolio-btn-item:not(:last-child) {
@@ -418,8 +419,8 @@ body {
 .portfolio-items-img {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 25px;
+  justify-content: center; /**/
 }
 /* portfolio tablet */
 @media (max-width: 768px) {
@@ -427,13 +428,11 @@ body {
     padding-top: 80px;
   }
   .portfolio-btn-list {
-    /* width: 550px; */
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
     margin: 0 auto;
-    /* padding: 0 60px 60px; */
   }
   .portfolio-btn-item {
     margin-right: 0px;
@@ -447,7 +446,6 @@ body {
   }
   .portfolio-item {
     max-width: 450px;
-    /* height: 560px; */
     height: auto;
   }
 }
@@ -505,7 +503,8 @@ body {
 .price-cart {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   border: 3px solid var(--color-gold);
   align-items: center;
   padding-top: 43px;
@@ -552,7 +551,7 @@ body {
     gap: 44px;
   }
   .price-cart {
-    width: 420px;
+    max-width: 420px;
   }
 }
 /* ================== contacts ================ ====== */
@@ -625,6 +624,9 @@ input:-webkit-autofill:active {
     background-size: auto 600px;
     background-position: center center;
     height: 600px;
+  }
+  .wrapper-contacts {
+    justify-content: center;
   }
   .form-contacts {
     display: flex;
@@ -717,49 +719,47 @@ input:-webkit-autofill:active {
   }
 }
 
-/* @media (max-width: 768px) { */
-/* ========= backdrop ========== */
-/* .overlay {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
-  }
-} */
 /* ================== burger ================== */
 @media (max-width: 768px) {
-  /* .col:first-of-type {
-    margin-top: 20px;
-    margin-right: 64px;
+  /* .header__inner {
+    overflow-x: hidden;
+    position: relative;
   } */
-
-  /* .hamburger .line {
+  .hamburger {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    right: 60px;
+    margin-top: 20px;
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  .hamburger .line {
     width: 50px;
-    height: 5px;
+    height: 3px;
     background-color: #ecf0f1;
     display: block;
-    margin: 8px auto;
+    margin: 9px auto;
+    transition: all 0.3s;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-  } */
+  }
+  /* nav */
+  .header__nav.open {
+    right: 0;
+  }
 
-  /* ONE */
   #hamburger-1.is-active .line:nth-child(2) {
     opacity: 0;
   }
-
   #hamburger-1.is-active .line:nth-child(1) {
     -webkit-transform: translateY(13px) rotate(45deg);
     -ms-transform: translateY(13px) rotate(45deg);
     -o-transform: translateY(13px) rotate(45deg);
     transform: translateY(13px) rotate(45deg);
   }
-
   #hamburger-1.is-active .line:nth-child(3) {
     -webkit-transform: translateY(-13px) rotate(-45deg);
     -ms-transform: translateY(-13px) rotate(-45deg);
@@ -768,33 +768,6 @@ input:-webkit-autofill:active {
   }
   /* ======================================= */
   /* стили для модалки */
-  .header__inner {
-    overflow-x: hidden;
-    position: relative;
-  }
-  .hamburger {
-    display: block;
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    margin-top: 20px;
-  }
-  .hamburger:hover {
-    cursor: pointer;
-  }
-
-  .hamburger .line {
-    width: 50px;
-    height: 3px;
-    background-color: #ecf0f1;
-    display: block;
-    margin: 9px auto;
-    transition: all 0.3s;
-  }
-  /* nav */
-  .header__nav.open {
-    right: 0;
-  }
   .header__nav {
     position: fixed;
     right: -620px;
@@ -806,9 +779,7 @@ input:-webkit-autofill:active {
     transition: all 0.3s;
     z-index: 1;
   }
-  .menu .nav .section {
-    display: block;
-  }
+
   .header__nav-list {
     display: flex;
     text-align: left;
@@ -826,6 +797,7 @@ input:-webkit-autofill:active {
     position: fixed;
     right: 60px;
   }
+
   /* стили overlay */
   .overlay {
     position: fixed;
@@ -849,3 +821,16 @@ input:-webkit-autofill:active {
     overflow: hidden;
   }
 }
+/* ====================================================== */
+/* ========= backdrop ========== */
+/* .overlay {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}  */

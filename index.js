@@ -59,11 +59,7 @@ console.log(
 //   iconBurg.classList.remove("hide");
 // }
 
-// const hamburger = document.querySelector(".hamburger");
-// function toggleMenu() {
-//   hamburger.classList.toggle("is-active");
-// }
-// hamburger.addEventListener("click", toggleMenu);
+//
 
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".header__nav");
@@ -75,8 +71,19 @@ function toggleMenu() {
   hamburger.classList.toggle("fixed");
   menu.classList.toggle("open");
   overlay.classList.toggle("block");
+  window.addEventListener("keydown", onEscKeyPress);
 }
 
 hamburger.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu);
 navLink.forEach((el) => el.addEventListener("click", toggleMenu));
+
+// закрытие по "Escape"
+function onEscKeyPress(event) {
+  const isEscKey = event.code === "Escape";
+  console.log(event);
+  if (isEscKey) {
+    toggleMenu();
+    window.removeEventListener("keydown", onEscKeyPress);
+  }
+}
