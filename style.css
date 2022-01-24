@@ -248,7 +248,7 @@ body {
   padding-bottom: 345px;
 }
 .hero-content-box {
-  width: 500px;
+  max-width: 500px;
   margin-left: 60px;
 }
 .hero-title {
@@ -393,6 +393,7 @@ body {
 /* btn */
 .portfolio-btn-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 60px;
 }
@@ -417,6 +418,7 @@ body {
 .portfolio-items-img {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
 }
 /* portfolio tablet */
@@ -444,8 +446,9 @@ body {
     gap: 44px;
   }
   .portfolio-item {
-    width: 450px;
-    height: 560px;
+    max-width: 450px;
+    /* height: 560px; */
+    height: auto;
   }
 }
 /* ================== video ====================== */
@@ -590,7 +593,8 @@ textarea {
   color: var(--color-gold);
 }
 .form-input {
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   font-family: inherit;
   font-weight: normal;
   font-size: 20px;
