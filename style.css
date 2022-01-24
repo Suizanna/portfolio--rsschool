@@ -766,14 +766,19 @@ input:-webkit-autofill:active {
     overflow-x: hidden;
     position: relative;
   }
-
+  .fixed {
+    position: fixed;
+    right: 60px;
+  }
   .hamburger {
     display: block;
     z-index: 2;
     position: absolute;
     right: 0;
     margin-top: 20px;
-    margin-right: 60px;
+  }
+  .hamburger:hover {
+    cursor: pointer;
   }
   .hamburger .line {
     width: 50px;
@@ -813,7 +818,7 @@ input:-webkit-autofill:active {
   .header__nav-link {
     transition: all 0.3s;
   }
-
+  /* стили overlay */
   .overlay {
     position: fixed;
     display: none;
@@ -827,9 +832,12 @@ input:-webkit-autofill:active {
     z-index: 1;
     cursor: pointer;
   }
+  .block {
+    display: block;
+  }
 
   /* scroll */
-  over-hid {
+  .over-hid {
     overflow: hidden;
   }
 }
