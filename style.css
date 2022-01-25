@@ -387,7 +387,9 @@ body {
     flex-wrap: wrap;
     gap: 35px 0;
     padding-bottom: 27px;
+    justify-content: center;
   }
+
   .skill__item {
     max-width: 300px;
     /* width: 100%; */
@@ -452,6 +454,7 @@ body {
     justify-content: center;
     margin: 0 auto;
   }
+
   .portfolio-btn-item {
     margin-right: 0px;
   }
@@ -465,6 +468,17 @@ body {
   .portfolio-item {
     max-width: 450px;
     height: auto;
+  }
+}
+@media (min-width: 769px) {
+  .portfolio-btn-list {
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+  }
+  .portfolio-btn-item {
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
 }
 /* ================== video ====================== */
@@ -582,13 +596,21 @@ body {
   padding-top: 100px;
 }
 
-.contacts .container {
+/* .contacts .container {
   background: url("./assets/img/contacts.jpg");
   background-size: auto 700px;
   background-position: center center;
   height: 700px;
-}
+} */
 
+.contacts .container {
+  background: url("./assets/img/contacts.jpg");
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 640px;
+  padding-top: 60px;
+}
 .wrapper-contacts {
   display: flex;
   justify-content: flex-end;
@@ -653,7 +675,6 @@ input:-webkit-autofill:active {
   @media (max-width: 750px) {
     .contacts .container {
       margin: 0 auto;
-      background-image: url("./assets/img/contacts-tablet.jpg");
       background-position: -232px center;
     }
   }
