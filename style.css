@@ -572,6 +572,11 @@ body {
     max-width: 420px;
   }
 }
+@media (max-width: 320px) {
+  .price-button {
+    width: 80%;
+  }
+}
 /* ================== contacts ================ ====== */
 .contacts {
   padding-top: 100px;
