@@ -442,11 +442,13 @@ body {
   gap: 25px;
   justify-content: center; /**/
 }
+
 /* portfolio tablet */
 @media (max-width: 768px) {
   .portfolio {
     padding-top: 80px;
   }
+  /* 769 -934 исправить */
   .portfolio-btn-list {
     display: flex;
     flex-wrap: wrap;
@@ -454,8 +456,7 @@ body {
     justify-content: center;
     margin: 0 auto;
   }
-
-  .portfolio-btn-item {
+  .portfolio-btn-item:not(:last-child) {
     margin-right: 0px;
   }
   .portfolio-items-img {
@@ -470,17 +471,7 @@ body {
     height: auto;
   }
 }
-@media (min-width: 769px) {
-  .portfolio-btn-list {
-    display: flex;
-    max-width: 500px;
-    margin: auto;
-  }
-  .portfolio-btn-item {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-}
+
 /* ================== video ====================== */
 .video {
   padding-top: 100px;
