@@ -723,22 +723,28 @@ input:-webkit-autofill:active {
     padding-top: 28px;
     padding-bottom: 28px;
   }
+  .footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .footer-data {
     margin-bottom: 16px;
+    justify-content: space-around;
   }
   .footer-item {
     line-height: 24px;
   }
   .footer-school {
+    width: 211px;
     margin-bottom: 20px;
   }
   .footer-school-item {
     line-height: 24px;
   }
-  .footer-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .icon-list {
+    width: 178px;
+    justify-content: space-around;
   }
 }
 
