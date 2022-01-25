@@ -572,7 +572,7 @@ body {
     max-width: 420px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 405px) {
   .price-button {
     width: 80%;
   }
@@ -581,12 +581,14 @@ body {
 .contacts {
   padding-top: 100px;
 }
+
 .contacts .container {
   background: url("./assets/img/contacts.jpg");
   background-size: auto 700px;
   background-position: center center;
   height: 700px;
 }
+
 .wrapper-contacts {
   display: flex;
   justify-content: flex-end;
@@ -647,6 +649,13 @@ input:-webkit-autofill:active {
     background-size: auto 600px;
     background-position: center center;
     height: 600px;
+  }
+  @media (max-width: 750px) {
+    .contacts .container {
+      margin: 0 auto;
+      background-image: url("./assets/img/contacts-tablet.jpg");
+      background-position: -232px center;
+    }
   }
   .wrapper-contacts {
     justify-content: center;
