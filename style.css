@@ -75,6 +75,11 @@ body {
     padding: 0 60px;
   }
 }
+/* @media (max-width: 320px) {
+  .container {
+    padding: 0 20px;
+  }
+} */
 /* common styles */
 .section-title {
   font-family: "Merriweather", sans-serif;
@@ -374,7 +379,7 @@ body {
     margin-bottom: 50px;
   }
   .wrapper::before {
-    width: 364px;
+    max-width: 364px;
     top: 20px;
   }
   .skills__items-list {
@@ -384,10 +389,20 @@ body {
     padding-bottom: 27px;
   }
   .skill__item {
-    width: 300px;
+    max-width: 300px;
+    /* width: 100%; */
     padding-bottom: 40px;
     padding-right: 10px;
     padding-left: 10px;
+    padding: 75px 10px 0;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper::before {
+    max-width: 250px;
+  }
+  .skill__item {
+    padding: 75px 10px 0;
   }
 }
 /* ================== portfolio ====================== */
