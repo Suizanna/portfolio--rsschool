@@ -75,7 +75,7 @@ body {
     padding: 0 60px;
   }
 }
-@media (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .container {
     padding: 0 20px;
   }
@@ -114,6 +114,7 @@ body {
   border: 0;
   transition: all 250ms var(--timingFn);
   background-color: var(--color-gold);
+  transition: all 0.3s;
 }
 .btn:hover,
 .btn:focus {
@@ -165,10 +166,6 @@ body {
   align-items: center;
   margin-top: 20px;
 }
-/* .nav-list {
-  width: 500px;
-  margin-right: 30px;
-} */
 .nav-item {
   margin-right: 30px;
 }
@@ -186,7 +183,6 @@ body {
   color: var(--color-gold);
 }
 .language-switch {
-  /* width: 70px; */
   align-items: center;
   margin-top: 20px;
 }
@@ -242,12 +238,6 @@ body {
   .language-link {
     margin-right: 9px;
   }
-  /* .language-link:not(:last-child) {
-    margin-right: 9px;
-  }
-  .slash {
-    margin-right: 18px;
-  } */
 }
 /* =================== HERO====================== */
 .hero {
@@ -317,8 +307,8 @@ body {
 /* Cart */
 .skills__items-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .skill__item {
   background-position: center top;
@@ -371,40 +361,49 @@ body {
   line-height: 36px;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .skills__items-list {
+    gap: 40px;
+    justify-content: center;
+  }
+}
 @media (max-width: 768px) {
   .skills {
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 13px;
   }
-  .section-title {
-    margin-bottom: 50px;
+  .skills-title {
+    margin-bottom: 70px;
   }
   .wrapper::before {
     max-width: 364px;
     top: 20px;
   }
   .skills__items-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px 0;
     padding-bottom: 27px;
-    justify-content: center;
+    outline: 1px solid red;
   }
-
   .skill__item {
     max-width: 300px;
     /* width: 100%; */
-    padding-bottom: 40px;
+    padding-top: 75px;
     padding-right: 10px;
     padding-left: 10px;
-    padding: 75px 10px 0;
+    padding-bottom: 40px;
+    padding: 75px 10px 40px;
+    outline: 1px solid red;
+  }
+  .item__text {
+    line-height: 22px;
   }
 }
-@media (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .wrapper::before {
     max-width: 250px;
   }
   .skill__item {
-    padding: 75px 10px 0;
+    padding: 75px 10px 40;
   }
 }
 /* ================== portfolio ====================== */
@@ -415,8 +414,8 @@ body {
 .portfolio-btn-list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /**/
-  padding-bottom: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 .portfolio-btn-item:not(:last-child) {
   margin-right: 5px;
@@ -440,22 +439,28 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: center; /**/
+  justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .portfolio-btn-list {
+    gap: 5px;
+    max-width: 445px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+  .portfolio-btn-item:not(:last-child) {
+    margin-right: 0px;
+  }
+}
 /* portfolio tablet */
 @media (max-width: 768px) {
   .portfolio {
-    padding-top: 80px;
+    /* padding-top: 80px; */
+    padding-top: 100px;
   }
-  /* 769 -934 исправить */
-  .portfolio-btn-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    margin: 0 auto;
-  }
+
   .portfolio-btn-item:not(:last-child) {
     margin-right: 0px;
   }
@@ -464,7 +469,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 44px;
+    /* gap: 44px; */
+    gap: 21px;
   }
   .portfolio-item {
     max-width: 450px;
@@ -502,7 +508,16 @@ body {
 
 @media (max-width: 768px) {
   .video {
-    padding-top: 80px;
+    padding-top: 100px;
+  }
+  .video .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .video-img {
+    width: 768px;
+    height: 418px;
+    max-width: 100%;
   }
   .video-btn {
     width: 64.62px;
@@ -564,7 +579,7 @@ body {
 }
 @media (max-width: 768px) {
   .price {
-    padding-top: 80px;
+    padding-top: 100px;
   }
   .price-block {
     display: flex;
@@ -586,22 +601,14 @@ body {
 .contacts {
   padding-top: 100px;
 }
-
-/* .contacts .container {
+.contacts .container {
   background: url("./assets/img/contacts.jpg");
   background-size: auto 700px;
   background-position: center center;
-  height: 700px;
-} */
-
-.contacts .container {
-  background: url("./assets/img/contacts.jpg");
   background-repeat: no-repeat;
-  max-width: 1440px;
-  margin: 0 auto;
-  height: 640px;
-  padding-top: 60px;
+  height: 700px;
 }
+
 .wrapper-contacts {
   display: flex;
   justify-content: flex-end;
@@ -660,7 +667,6 @@ input:-webkit-autofill:active {
   .contacts .container {
     background: url("./assets/img/contacts-tablet.jpg");
     background-size: auto 600px;
-    background-position: center center;
     height: 600px;
   }
   @media (max-width: 750px) {
@@ -771,10 +777,6 @@ input:-webkit-autofill:active {
 
 /* ================== burger ================== */
 @media (max-width: 768px) {
-  /* .header__inner {
-    overflow-x: hidden;
-    position: relative;
-  } */
   .hamburger {
     display: block;
     z-index: 2;
@@ -783,7 +785,7 @@ input:-webkit-autofill:active {
     margin-top: 20px;
     cursor: pointer;
   }
-  @media (max-width: 320px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     .hamburger {
       right: 20px;
     }
@@ -797,16 +799,14 @@ input:-webkit-autofill:active {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    transition: all 0.3s;
+    transition: all 0.9s;
   }
   .hamburger:hover .line {
     background-color: var(--color-gold);
   }
-  /* 
-  открытие модал */
+  /* открытие модал */
   .header__nav.open {
     right: 0;
-    /* transition: all 0.3s; */
   }
 
   #hamburger-1.is-active .line:nth-child(2) {
@@ -834,7 +834,7 @@ input:-webkit-autofill:active {
     width: 100%;
     height: 100%;
     background-color: var(--color-black);
-    transition: all 0.3s;
+    transition: all 0.9s;
     z-index: 1;
   }
 
@@ -846,6 +846,11 @@ input:-webkit-autofill:active {
     font-size: 35px;
     margin-top: -235px;
     margin-left: 127px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 399px) {
+    .header__nav-list {
+      margin-left: 90px;
+    }
   }
   .header__nav-link {
     transition: all 0.3s;
@@ -879,88 +884,3 @@ input:-webkit-autofill:active {
     overflow: hidden;
   }
 }
-/* ====================================================== */
-/* ========= backdrop ========== */
-/* .overlay {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
-  }
-}  */
-/* =================================================== */
-/* <!-- BURGER-2 в header-->
-         <div class="burger"></div */
-
-/* <!-- burg-cont  в футере -->
-    <div class="screen"></div>
-    <div class="burg-cont">
-        <div class="burg-end cl"></div>
-        <nav class="menu__burg">
-            <ul class="menu__burg__item">
-                <li class="cl"><a href="#contact">Contact</a></li>
-                <li class="cl"><a href="#high">Skill Highlights</a></li>
-                <li class="cl"><a href="#codeexample">Code Example</a></li>
-                <li class="cl"><a href="#aboutme">About Me</a></li>
-                <li class="cl"><a href="#experience">Experience</a></li>
-            </ul>
-        </nav>
-    </div> */
-
-/* ========= burger-2 ========== */
-/* .screen {
-    position: relative;
-  } */
-/* .burger { */
-/* display: block; */
-/* position: absolute; */
-/* top: 5px;
-    right: 5px; */
-/* margin: auto;
-    width: 50px;
-    height: 50px;
-    background: url(./assets/svg/burger_start.svg);
-    cursor: pointer;
-  }
-
-  .burg-cont { 
-    display:none;
-    }
-    
-  .burg-cont {
-    display: block;
-    position: absolute;
-    position: relative;
-    transition: 1s;
-    left: -55vw;
-    top: 5vh;
-    width: 50vw;
-    min-height: 30vh;
-    background-color: #000;
-  }
-  .left {
-    transition: 1s;
-    left: 25vw;
-  }
-  .burg-end {
-    margin-top: 2vh;
-    margin-left: 40vw;
-    width: 28px;
-    height: 28px;
-    background: url(./assets/svg/burger_end.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-  }
-  .hide {
-    display: none;
-  }
-  .over-hid {
-    overflow: hidden;
-  } */
-/* end burger */
