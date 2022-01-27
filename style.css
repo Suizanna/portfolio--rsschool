@@ -777,10 +777,13 @@ input:-webkit-autofill:active {
 
 /* ================== burger ================== */
 @media (max-width: 768px) {
+  .three .col {
+    position: relative;
+  }
   .hamburger {
     display: block;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     right: 60px;
     margin-top: 20px;
     cursor: pointer;
