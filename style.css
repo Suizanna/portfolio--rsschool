@@ -921,6 +921,7 @@ input:-webkit-autofill:active {
   border: none;
   cursor: pointer;
   margin-top: 20px;
+  margin-left: 25px;
   transition: all 0.3s;
 }
 @media screen and (min-width: 769px) and (max-width: 1440px) {
